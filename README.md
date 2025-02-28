@@ -12,11 +12,13 @@ Será um gerenciador de produtos de um super mercado, onde podemos visualizar to
 - Maven
 - Spring
 - Spring web
+- MySql
 
 ## Requisitos para utilização
 
 - Ter o java jdk 17 instalado
 - Ter o apache maven instalado e configurado
+- Ter o MySql server instalado
 
 ## Estrutura de pastas
 
@@ -26,7 +28,6 @@ Será um gerenciador de produtos de um super mercado, onde podemos visualizar to
 - - ProdutoRepository.java
 - model
 - - ProdutoModel.java
-- - TabelaDeProduto.java
 - CrudJavaSpringApplication.java
 
 ## Diagrama de Classe (Simulação de Tabela)
@@ -49,14 +50,4 @@ classDiagram
         +getQuantidade() int
         +setQuantidade(int quantidade) void
     }
-
-    class TabelaDeProdutos {
-        -Produto[] produtos
-        +void adicionarProduto(Produto p)
-        +void removerProduto(UUID id)
-        +void listarProdutos()
-        +Produto[] verProdutos()
-        +Produto verProduto(UUID id)
-    }
-
 ```
