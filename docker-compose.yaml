@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0  # Usando a versão 8.0 do MySQL
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678  # Senha do usuário root
+      MYSQL_DATABASE: crud          # Nome do banco de dados
+      MYSQL_USER: usuario               # Usuário do banco de dados
+      MYSQL_PASSWORD: 12345678             # Senha do usuário
+    ports:
+      - "3306:3306"  # Expõe a porta 3306 do contêiner para o host
+    volumes:
+      - mysql_data:/var/lib/mysql  # Persistência dos dados do MySQL
+
+volumes:
+  mysql_data:
